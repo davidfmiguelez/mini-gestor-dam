@@ -1,11 +1,11 @@
 
 
+import java.util.Scanner;
 
-// RegistroIncidencia.java
-	public class RegistroIncidencia {
-	    public static void ejecutar() {
-	        System.out.println("[Registro pendiente]");
-	    }
-	}
-
-
+public class RegistroIncidencia {
+    public static void ejecutar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Título de la incidencia: ");
+        String titulo = scanner.nextLine();
+    }
+}
