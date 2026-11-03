@@ -7,15 +7,24 @@ public class PrioridadIncidencia {
         System.out.print("Introduce la prioridad (1, 2 o 3): ");
         int numero = teclado.nextInt();
         
-        // --- Clasificación con condiciones ---
+        String resultado = "";
+
+        // Clasificación con condiciones
         if (numero == 1) {
-            System.out.println("BAJA");
+            resultado = "BAJA";
         } else if (numero == 2) {
-            System.out.println("MEDIA");
+            resultado = "MEDIA";
         } else if (numero == 3) {
-            System.out.println("ALTA");
+            resultado = "ALTA";
         } else {
-            System.out.println("Mensaje de nivel no válido");
+            resultado = "NO VÁLIDA";
+        }
+        
+        // Mensaje final de confirmación sugerido por mi compañero 
+        if (resultado.equals("NO VÁLIDA")) {
+            System.out.println("Error: Mensaje de nivel no válido.");
+        } else {
+            System.out.println("Confirmación: La prioridad asignada a la incidencia es " + resultado + ".");
         }
         
         teclado.close();
